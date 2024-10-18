@@ -1,0 +1,8 @@
+#third_screen > .image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 557px;
+    height: 426px;
+}

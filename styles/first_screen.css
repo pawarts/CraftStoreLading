@@ -1,0 +1,19 @@
+#first_screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_wrapper{
+    margin-right: 100px;
+}
+
+.laptop_image{
+    width: 700px;
+    height: 416px;
+}
+
+.logo_text{
+    font-family: "Geologica", sans-serif;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./styles/nullystyle.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/first_screen.css">
+    <link rel="stylesheet" href="./styles/second_screen.css"/>
+    <link rel="stylesheet" href="./styles/third_screen.css">
+    <link rel="stylesheet" href="./styles//fourth_screen.css">
+    <link rel="stylesheet" href="./styles//fifth_screen.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+    <title>CraftStore</title>
+</head>
+<body>
+    <div class="wrapper">
+
+         <header class="header" id="header">
+            <img class="icon" src="./icons/logo.svg" alt="">
+
+            <nav class="navigation_items">
+                <a href="#first_screen" class="navigation_item">Головна</a>
+                <a href="#second_screen" class="navigation_item">Що це?</a>
+                <a href="#third_screen" class="navigation_item">Пропозиція</a>
+                <a href="#fourth_screen" class="navigation_item">Підтримка</a>
+            </nav>
+
+        </header>
+
+        <div class="screen" id="first_screen">
+            <div class="title_wrapper">
+                <h1 class="logo_text">CraftStore</h1>
+                <p>Твори, продавай, розквітай</p>
+            </div>
+
+            <div>
+                <img src="./images/Screen 1/image 1.png" class="laptop_image" alt="">
+            </div>
+        </div>
+
+        <div class="screen" id="second_screen">
+            <h2>Що це?</h2>
+            <p class="screen_review">
+                CraftStore – це більше, ніж просто платформа для продажу. Це місце, де ремісники знаходять покупців, а творчість набуває нових можливостей. Ми об'єднуємо людей, які люблять створювати своїми руками, з тими, хто цінує унікальні, індивідуальні речі, виготовлені з душею.
+            </p>
+            <img src="./images/Screen 2/Charco Build.png" alt="">
+        </div>
+
+        <div class="screen" id="third_screen">
+            <h2>Наша місія</h2>
+            <p class="screen_review">
+                Ми віримо, що кожен майстер заслуговує на визнання та можливість поділитися своїми виробами зі світом. CraftStore допомагає ремісникам вивести свою творчість на новий рівень, пропонуючи просту і зручну платформу для продажу виробів. Без зайвих посередників, без складних систем – тільки ви, ваші творіння і покупці, які їх полюблять.
+            </p>
+            <img class="image" src="./images/Screen 3/Beep Beep Road Works.png" alt="">
+        </div>
+
+        <div class="screen" id="fourth_screen">
+            <h2>Пропозиції</h2>
+            <ul class="list">
+                <li><b>Простий процес продажу:</b> Ви створюєте – ми допомагаємо вам знайти покупця. Наш інтуїтивний інтерфейс робить продаж швидким і легким.</li>
+                <li><b>Соціальний досвід:</b> CraftStore – це не просто магазин. Це спільнота людей, які поділяють любов до мистецтва, творчості та ручної роботи.</li>
+                <li><b>Без корзини – тільки дії:</b> Ми створили систему, де покупці можуть одразу придбати ваш товар без зайвих етапів.</li>
+            </ul>
+        </div>
+
+        <div class="screen" id="fifth_screen">
+            <h2>Підтримка проекту</h2>
+
+            <div class="text_wrapper">
+                <p>Зараз у вас є унікальна можливість стати частиною розвитку CraftStore!</p>
+
+                <p>Ми активно працюємо над тим, щоб зробити CraftStore найкращою платформою для ремісників, і ваша підтримка може допомогти нам досягти цього швидше. Ви можете допомогти декількома способами:</p>
+            </div>
+
+            <ul class="list">
+                <li><b>Фінансова підтримка:</b> Ваші внески допоможуть нам покращити функціонал платформи, розширити можливості для ремісників і надати ще більше корисних інструментів для продажу унікальних виробів.</li>
+                <li><b>Ваші побажання та ідеї:</b> Ми завжди відкриті до ваших пропозицій! Напишіть, що б ви хотіли побачити на сайті, які нові функції чи можливості зробили б CraftStore ще зручнішим для вас.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.addEventListener('scroll', function() {
+      const stickyElement = document.querySelector('#header');
+      const stickyOffset = stickyElement.offsetTop;
+  
+      if (window.scrollY > 0) {
+        stickyElement.classList.add('is-sticky');
+      } else {
+        stickyElement.classList.remove('is-sticky');
+      }
+    });
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+#fifth_screen > .text_wrapper{
+    max-width: 737px;
+    margin-top: 87px;
+    margin-left: 100px;
+}
+
+#fifth_screen > .text_wrapper > p:last-child{
+    margin-top: 74px;
+}
+
+
+#fifth_screen > .list{
+    margin-top: 80px;
+}
+
+#fifth_screen > .list > li{
+    margin-top: 15px;
+}

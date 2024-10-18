@@ -1,0 +1,8 @@
+#fourth_screen > .list{
+    margin:  25vh 0 0 110px;
+    max-width: 665px;
+}
+
+#fourth_screen > .list > li{
+    margin-bottom: 30px;
+}
