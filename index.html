@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +24,22 @@
     <title>CraftStore</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
 
          <header class="header" id="header">
             <img class="icon" src="./icons/logo.svg" alt="">
 
-            <nav class="navigation_items">
+            <nav class="navigation_items" id="navigation_items">
                 <a href="#first_screen" id="main_link" class="navigation_item">Головна</a>
                 <a href="#second_screen" class="navigation_item">Що це?</a>
                 <a href="#fourth_screen" class="navigation_item">Пропозиції</a>
                 <a href="#fifth_screen" class="navigation_item">Підтримка</a>
             </nav>
+
+            <button id="toggleBurgerMenuIcon">
+                <img class="" id="ic_open_menu" src="./icons/open_menu.svg" alt="" >
+                <img class="" id="ic_close_menu" src="./icons/close_menu.svg" alt="">
+            </button>
 
         </header>
 
@@ -108,23 +113,6 @@
 </body>
 
 <script>
-
-    const main_link = document.getElementById("main_link")
-
-
-
-    const scroll = () => {
-        
-        window.scrollTo({
-            top:0,
-            behavior: "smooth"
-        })
-
-        console.log("click")
-    }
-
-    main_link.addEventListener("click", scroll)
-
     window.addEventListener('scroll', function() {
       const stickyElement = document.querySelector('#header');
       const stickyOffset = stickyElement.offsetTop;
@@ -135,6 +123,59 @@
         stickyElement.classList.remove('is-sticky');
       }
     });
+</script>
+<script>
+    
+    const main_link = document.getElementById("main_link")
+
+
+
+    const scroll = () => {
+        
+        window.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
+    }
+
+    main_link.addEventListener("click", scroll)
+</script>
+
+<script>
+
+    const toggleBurgerMenuIcon = document.getElementById("toggleBurgerMenuIcon")
+    const navigationItems = document.getElementById("navigation_items")
+    const wrapper = document.getElementById("wrapper")
+
+
+    const ic_open_menu = document.getElementById("ic_open_menu")
+    const ic_close_menu = document.getElementById("ic_close_menu")
+    
+
+    const navigation_item = document.getElementsByClassName("navigation_item")
+
+    toggleBurgerMenuIcon.addEventListener("click", () => {
+        wrapper.classList.toggle("open_menu")
+        
+        navigationItems.classList.toggle("open_menu")
+
+        ic_open_menu.classList.toggle("open_menu")
+        ic_close_menu.classList.toggle("open_menu")
+    })
+
+    for(let i = 0; i < navigation_item.length; i++){
+        const element = navigation_item[i]
+
+        element.addEventListener("click", () => {
+            wrapper.classList.remove("open_menu")
+        
+            navigationItems.classList.remove("open_menu")
+
+            ic_open_menu.classList.remove("open_menu")
+            ic_close_menu.classList.remove("open_menu")
+        })
+    }
+
 </script>
 
 </html>
