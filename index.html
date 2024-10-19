@@ -10,7 +10,10 @@
 
 
     <link rel="stylesheet" href="./styles/nullystyle.css">
+    <link rel="stylesheet" href="./styles/mobile_nullystyle.css">
+
     <link rel="stylesheet" href="./styles/header.css">
+    
     <link rel="stylesheet" href="./styles/first_screen.css">
     <link rel="stylesheet" href="./styles/second_screen.css"/>
     <link rel="stylesheet" href="./styles/third_screen.css">
@@ -27,10 +30,10 @@
             <img class="icon" src="./icons/logo.svg" alt="">
 
             <nav class="navigation_items">
-                <a href="#first_screen" class="navigation_item">Головна</a>
+                <a href="#first_screen" id="main_link" class="navigation_item">Головна</a>
                 <a href="#second_screen" class="navigation_item">Що це?</a>
-                <a href="#third_screen" class="navigation_item">Пропозиція</a>
-                <a href="#fourth_screen" class="navigation_item">Підтримка</a>
+                <a href="#fourth_screen" class="navigation_item">Пропозиції</a>
+                <a href="#fifth_screen" class="navigation_item">Підтримка</a>
             </nav>
 
         </header>
@@ -41,7 +44,7 @@
                 <p>Твори, продавай, розквітай</p>
             </div>
 
-            <div>
+            <div class="laptop_image_wrapper">
                 <img src="./images/Screen 1/image 1.png" class="laptop_image" alt="">
             </div>
         </div>
@@ -78,15 +81,50 @@
                 <p>Ми активно працюємо над тим, щоб зробити CraftStore найкращою платформою для ремісників, і ваша підтримка може допомогти нам досягти цього швидше. Ви можете допомогти декількома способами:</p>
             </div>
 
-            <ul class="list">
-                <li><b>Фінансова підтримка:</b> Ваші внески допоможуть нам покращити функціонал платформи, розширити можливості для ремісників і надати ще більше корисних інструментів для продажу унікальних виробів.</li>
-                <li><b>Ваші побажання та ідеї:</b> Ми завжди відкриті до ваших пропозицій! Напишіть, що б ви хотіли побачити на сайті, які нові функції чи можливості зробили б CraftStore ще зручнішим для вас.</li>
-            </ul>
+            <div class="block">
+                <h3>Фінансова підтримка</h3>
+                <p class="text">Ви можете підтримати нас фінансово, і це можна зробити кількома способами. Ваша підтримка дає нам можливість продовжувати роботу над проектом і вдосконалювати його. Після завершення бета-версії ви станете одними з перших, хто зможе нею скористатися.</p>
+
+                <ol class="list">
+                    <p>Ви можете це зробити кількома способами</p>
+                    <li><b>Monobank:</b> [посилання]</li>
+                    <li><b>Patreon: </b> [посилання]</li>
+                    <li><b>Buy Me A Coffee: </b>[посилання]</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Поділіться своєю ідеєю</h3>
+                <p class="text">У вас є ідея, яку ви хотіли б бачити на CraftStore? Поділіться нею з нами, і, можливо, саме ваша пропозиція стане частиною нашої платформи. Ми завжди відкриті до нових ідей та прагнемо зробити CraftStore кращим для всіх. Якщо у вас є бачення того, що може покращити наш сервіс або додати нові можливості для ремісників і покупців – не соромтеся запропонувати! Разом ми зможемо зробити CraftStore платформою, яка буде відповідати вашим потребам.</p>
+
+                <ol class="list">
+                    <p>Ви можете це зробити кількома способами</p>
+                    <li><b>Telegram:</b> [посилання]</li>
+                    <li><b>Instagram:</b> [посилання]</li>
+                </ol>
+            </div>
         </div>
     </div>
 </body>
 
 <script>
+
+    const main_link = document.getElementById("main_link")
+
+
+
+    const scroll = () => {
+        
+        window.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
+
+        console.log("click")
+    }
+
+    main_link.addEventListener("click", scroll)
+
     window.addEventListener('scroll', function() {
       const stickyElement = document.querySelector('#header');
       const stickyOffset = stickyElement.offsetTop;

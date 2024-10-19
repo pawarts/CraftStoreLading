@@ -28,7 +28,7 @@ h2{
 .screen{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid #00000000;
 }
 
@@ -36,6 +36,11 @@ h2{
     max-width: 664px;
     margin-left: 100px;
     margin-top: 180px;
+}
+
+.text{
+    margin-top: 25px;
+    max-width: 665px;
 }
 
 .list{
